@@ -8,7 +8,7 @@ function App() {
   const [searchCity, setSearchCity] = useState("Bokaro");
   const [bgimage, setBgimage] = useState("");
 
-  const URL = `https://api.openweathermap.org/data/2.5/weather?q=${searchCity}&appid=4b3928970b6bfcaaec3a8eb9ddd172de&units=metric`;
+  const URL = `https://api.openweathermap.org/data/2.5/weather?q=${searchCity}&appid=${import.meta.env.VITE_WEATHER_API_KEY}&units=metric`;
 
   useEffect(() => {
     const fetchWeather = async () => {
