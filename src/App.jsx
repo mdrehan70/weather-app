@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./App.css";
+import { toast } from "react-toastify";
 
 function App() {
   const [weather, setWeather] = useState(null);
@@ -15,8 +16,9 @@ function App() {
       try {
         const res = await fetch(URL);
         if (!res.ok) {
-          throw alert("Failed to Fetch Weather!");
+          return toast.error("Failed to Fetch Weather!")
         }
+        toast.success("Successfully Fetched the Weather!")
         const data = await res.json();
         setWeather(data);
         setError(null);
@@ -33,7 +35,7 @@ function App() {
     const images = ["bg1", "bg2", "bg3", "bg4", "bg5", "bg6", "bg7", "bg8", "bg9", "bg10"];
     const randomImage = images[Math.floor(Math.random() * images.length)];
     setBgimage(randomImage);
-  }, [searchCity]);
+  }, []);
 
   if (error) {
     return <p>{error}</p>;
