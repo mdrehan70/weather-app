@@ -51,6 +51,26 @@ body {
   background: url("./assets/bg-5.jpg") no-repeat center center/cover;
 }
 
+.bg6 {
+  background: url("./assets/bg-6.webp") no-repeat center center/cover;
+}
+
+.bg7 {
+  background: url("./assets/bg-7.jpg") no-repeat center center/cover;
+}
+
+.bg8 {
+  background: url("./assets/bg-8.jpg") no-repeat center center/cover;
+}
+
+.bg9 {
+  background: url("./assets/bg-9.jpg") no-repeat center center/cover;
+}
+
+.bg10 {
+  background: url("./assets/bg-10.jpg") no-repeat center center/cover;
+}
+
 .searchContainer {
   color: black;
   line-height: 2;

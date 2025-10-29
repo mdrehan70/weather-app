@@ -30,10 +30,10 @@ function App() {
   }, [searchCity]);
 
   useEffect(() => {
-    const images = ["bg1", "bg2", "bg3", "bg4", "bg5"];
+    const images = ["bg1", "bg2", "bg3", "bg4", "bg5", "bg6", "bg7", "bg8", "bg9", "bg10"];
     const randomImage = images[Math.floor(Math.random() * images.length)];
     setBgimage(randomImage);
-  }, []);
+  }, [searchCity]);
 
   if (error) {
     return <p>{error}</p>;
